@@ -7,10 +7,6 @@ import {getBasketTotal} from "./reducer";
 function Subtotal() {
   const [{ basket }, dispatch] = useStateValue();
 
- /* const getBasketTotal = (basket) =>
-    basket.reduce((prev, next) => {
-      return prev + next.price;
-    }, 0); */
 
   return (
     <div className="subtotal">

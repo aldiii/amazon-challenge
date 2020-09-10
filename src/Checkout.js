@@ -4,6 +4,7 @@ import Subtotal from "./Subtotal";
 import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import FlipMove from "react-flip-move";
+import { getBasketTotal } from "./reducer";
 
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -25,8 +26,9 @@ function Checkout() {
           </h2>
 
           <FlipMove
-            enterAnimation="accordionVertical"
-            leaveAnimation="accordionVertical"
+            appearAnimation="elevator"
+            enterAnimation="elevator"
+            leaveAnimation="elevator"
           >
             {basket.map(({ id, image, title, price, rating }, i) => (
               <CheckoutProduct
@@ -38,6 +40,14 @@ function Checkout() {
               />
             ))}
           </FlipMove>
+          <h3 className="checkout__sum">
+            {basket.length
+              ? `Subtotal (${basket.length} item${
+                  basket.length > 1 ? "s" : ""
+                }):
+            $${getBasketTotal(basket)}`
+              : " "}
+          </h3>
         </div>
       </div>
       <div className="checkout__right">
