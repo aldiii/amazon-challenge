@@ -7,7 +7,7 @@ function Home() {
         <div className="home">
             <div className="home__container">
                 <img src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="" className="home__image"/>
-            </div>
+            
             <div className="home__row">
                 <Product 
                     id="4903850"
@@ -39,6 +39,7 @@ function Home() {
                     rating={5}
                 />
                 <Product
+
                   id="9008471"
                   title="Logitech G602 Lag-Free Wireless Gaming Mouse – 11 Programmable Buttons, Upto 2500 DPI"
                   price={89.96}
@@ -47,7 +48,7 @@ function Home() {
                 />
             </div>
             <div className="home__row">
-            <Product 
+            <Product
                     id="2018471"
                     title="OnePlus 8 Pro Ultramarine Blue, 5G Unlocked Android Smartphone U.S Version, 12GB RAM+256GB Storage, 120Hz Fluid Display,Quad Camera, Wireless Charge, with Alexa Built-in"
                     price={918.99}
@@ -56,7 +57,7 @@ function Home() {
                 /> 
             </div>
         </div>
-        
+    </div>
     )
 }
 
